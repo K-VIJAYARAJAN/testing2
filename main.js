@@ -61,7 +61,6 @@ client.on("message_create", async (msg) => {
     if (config.pmpermit_enabled == "true") {
       var otherChat = await (await msg.getChat()).getContact();
       if (
-        msg.fromMe &&
         msg.type !== "notification_template" &&
         otherChat.isUser &&
         !(await pmpermit.isPermitted(otherChat.number)) &&
@@ -80,7 +79,7 @@ client.on("message_create", async (msg) => {
     }
   } catch (ignore) {}
 
-  if (msg.fromMe && msg.body.startsWith("!")) {
+  if (msg.body.startsWith("!")) {
     let args = msg.body.slice(1).trim().split(/ +/g);
     let command = args.shift().toLowerCase();
 

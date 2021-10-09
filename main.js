@@ -64,7 +64,6 @@ client.on("message_create", async (msg) => {
         msg.type !== "notification_template" &&
         otherChat.isUser &&
         !(await pmpermit.isPermitted(otherChat.number)) &&
-        !otherChat.isMe &&
         !msg.body.startsWith("!") &&
         !msg.body.endsWith("_Powered by WhatsBot_")
       ) {

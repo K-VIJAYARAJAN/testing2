@@ -18,7 +18,7 @@
     },
     "PMPERMIT_ENABLED": {
       "description": "Enable Pmpermit write true or false only",
-      "value": "true"
+      "value": "false"
     },
     "MONGODB_URL": {
       "description": "MongoDB URL, Get it for free from cloud.mongodb.com",

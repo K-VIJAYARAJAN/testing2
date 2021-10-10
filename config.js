@@ -7,7 +7,7 @@ module.exports = {
     process.env.SESSION ||
       fs.readFileSync(__dirname + "/session.json", { encoding: "utf8" })
   ), //if not using env vars create a file named session.json
-  pmpermit_enabled: process.env.PMPERMIT_ENABLED || "true",
+  pmpermit_enabled: process.env.PMPERMIT_ENABLED || "false",
   mongodb_url: process.env.MONGODB_URL || process.env.MONGO_URL || "",
   yt_data_api_key: process.env.YT_DATA_API_KEY || "",
   default_tr_lang: process.env.DEFAULT_TR_LANG || "en",

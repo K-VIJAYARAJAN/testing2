@@ -94,9 +94,7 @@ client.on("message_create", async (msg) => {
       await client.sendMessage(
         msg.to,
         "No such command found. Type !help to get the list of available commands"
-        msg.reply,
-        "No such command found. Type !help to get the list of available commands"
-      );
+                              );
     }
   }
 });

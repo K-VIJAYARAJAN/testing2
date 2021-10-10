@@ -92,7 +92,7 @@ client.on("message_create", async (msg) => {
       }
     } else {
       await client.sendMessage(
-        msg.to,
+        msg.reply,
         "No such command found. Type !help to get the list of available commands"
                               );
     }

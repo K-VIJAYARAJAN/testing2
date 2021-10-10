@@ -27,8 +27,7 @@ const execute = async (client,msg,args) => {
     }
     
     await client.sendMessage(msg.to, new MessageMedia(data.mimetype, data.data, data.filename), { caption: `QR code for 👇\n` + "```" + msg.body + "```" });
-          client.sendMessage(msg.reply, new MessageMedia(data.mimetype, data.data, data.filename), { caption: `QR code for 👇\n` + "```" + msg.body + "```" });
-     };
+          };
 
 module.exports = {
     name: 'QR generator',

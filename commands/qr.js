@@ -25,8 +25,8 @@ const execute = async (client,msg,args) => {
     else {
         data = await qrgen(args.join(' '));
     }
-    
-    await client.sendMessage(msg.reply, new MessageMedia(data.mimetype, data.data, data.filename), { caption: `QR code for 👇\n` + "```" + msg.body + "```" });
+    client.sendPresenceAvailable();
+    msg.reply, new MessageMedia(data.mimetype, data.data, data.filename), { caption: `QR code for 👇\n` + "```" + msg.body + "```" };
           };
 
 module.exports = {

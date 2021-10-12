@@ -25,8 +25,7 @@ const execute = async (client,msg,args) => {
     else {
         data = await qrgen(args.join(' '));
     }
-    client.sendPresenceAvailable();
-    msg.reply(new MessageMedia(data.mimetype, data.data, data.filename));
+     msg.reply(new MessageMedia(data.mimetype, data.data, data.filename));
           };
 
 module.exports = {

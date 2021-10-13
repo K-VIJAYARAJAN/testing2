@@ -18,15 +18,15 @@ const execute = async (client,msg,args) => {
                 
         });
         let help = `${adminHelp}\n${infoHelp}\n${pluginHelp}\n${commands.get('help').help}`;
-        await client.sendMessage(msg.to, help);
+        await client.sendMessage(msg.reply, help);
     }
 
     else if(commands.has(args[0])){
-        await client.sendMessage(msg.to, commands.get(args[0]).help);
+        await client.sendMessage(msg.reply, commands.get(args[0]).help);
     }
 
     else {
-        await client.sendMessage(msg.to, `No command with the name *${args[0]}*...`);
+        await client.sendMessage(msg.reply, `No command with the name *${args[0]}*...`);
     }
     
 };

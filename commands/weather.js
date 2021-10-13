@@ -19,13 +19,13 @@ const execute = async (client, msg, args) => {
   var data = await fetchweather(args.join(" "));
   if (data == "error") {
     await client.sendMessage(
-      msg.to,
+      msg.reply,
       `🙇‍♂️ *Error*\n\n` + "```Something Unexpected Happened to fetch Weather```"
     );
   } else {
     var weather = data[0];
     await client.sendMessage(
-      msg.to,
+      msg.reply,
       `*Today's Weather at ${weather.location.name}*\n` +
         "```" +
         weather.current.skytext +

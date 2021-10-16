@@ -38,13 +38,13 @@ const execute = async (client, msg, args) => {
     }
 
     if (data == "error") {
-        await client.sendMessage(
-            msg.to,
+        await  msg.reply(
+             msg.reply,
             `🙇‍♂️ *Error*\n\n` + "```Something Unexpected Happened while translate```"
         );
     } else {
-        await client.sendMessage(
-            msg.to,
+        await  msg.reply(
+             msg.reply,
             `*Original (${data.ori_lang}) :* ` +
             "```" +
             data.original +

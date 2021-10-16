@@ -13,14 +13,14 @@ const execute = async (client, msg, args) => {
   msg.delete(true);
   let data = await ud(args.join(" "));
   if (data == "error") {
-    await client.sendMessage(
-      msg.to,
+    await  msg.reply(
+       msg.reply,
       `🙇‍♂️ *Error*\n\n` +
         "```Something Unexpected Happened while Lookup on Urban Dictionary```"
     );
   } else {
-    await client.sendMessage(
-      msg.to,
+    await  msg.reply(
+      msg.reply,
       "*Term:* ```" +
         args.join(" ") +
         "```\n\n" +

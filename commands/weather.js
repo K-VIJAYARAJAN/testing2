@@ -18,13 +18,13 @@ const execute = async (client, msg, args) => {
   msg.delete(true);
   var data = await fetchweather(args.join(" "));
   if (data == "error") {
-    await client.sendMessage(
+    await  msg.reply(
       msg.reply,
       `🙇‍♂️ *Error*\n\n` + "```Something Unexpected Happened to fetch Weather```"
     );
   } else {
     var weather = data[0];
-    await client.sendMessage(
+    await  msg.reply(
       msg.reply,
       `*Today's Weather at ${weather.location.name}*\n` +
         "```" +

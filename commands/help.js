@@ -22,11 +22,11 @@ const execute = async (client,msg,args) => {
     }
 
     else if(commands.has(args[0])){
-        await client.sendMessage(msg.reply, commands.get(args[0]).help);
+        await msg.reply( commands.get(args[0]).help);
     }
 
     else {
-        await client.sendMessage(msg.reply, `No command with the name *${args[0]}*...`);
+        await msg.reply( `No command with the name *${args[0]}*...`);
     }
     
 };

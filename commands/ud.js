@@ -14,14 +14,12 @@ const execute = async (client, msg, args) => {
   let data = await ud(args.join(" "));
   if (data == "error") {
     await  msg.reply(
-       msg.reply,
-      `🙇‍♂️ *Error*\n\n` +
+          `🙇‍♂️ *Error*\n\n` +
         "```Something Unexpected Happened while Lookup on Urban Dictionary```"
     );
   } else {
     await  msg.reply(
-      msg.reply,
-      "*Term:* ```" +
+         "*Term:* ```" +
         args.join(" ") +
         "```\n\n" +
         "*Definition:* ```" +
